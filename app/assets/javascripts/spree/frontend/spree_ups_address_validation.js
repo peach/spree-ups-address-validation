@@ -2,7 +2,10 @@
 // the installer will append this file to the app vendored assets here: vendor/assets/javascripts/spree/frontend/all.js'
 
 $(document).ready(function () {
+  ups_address_validation();
+});
 
+function ups_address_validation() {
   $(".ups-address-validation-skip-container").on('change', function() {
     $("#order_skip_ups_validation").val( $("input[type=checkbox]", this).is(":checked") ? "1" : "0" );
   });
@@ -32,4 +35,4 @@ $(document).ready(function () {
       scrollTop: $("#billing").offset().top - 90
     }, 1000);
   });
-});
+}  

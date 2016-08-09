@@ -5,9 +5,10 @@ Deface::Override.new(
   partial: 'spree/address/suggestions',
 )
 
-Deface::Override.new(
-  virtual_path: 'spree/checkout/_address',
-  name: 'add_skip_address_validation_hidden_field_to_checkout_form',
-  insert_before: '[data-hook="billing_fieldset_wrapper"]',
-  partial: 'spree/address/skip_address_validation_hidden_field',
-)
+#
+#Deface::Override.new(
+#  virtual_path: 'spree/checkout/_address',
+#  name: 'add_skip_address_validation_hidden_field_to_checkout_form',
+#  insert_after: "#order_ship_address_attributes_id",
+#  partial: 'spree/address/skip_address_validation_hidden_field',
+#)
