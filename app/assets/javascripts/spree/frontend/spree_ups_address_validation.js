@@ -25,8 +25,7 @@ function ups_address_validation() {
       $("#order_" + value + "_address_attributes_city").val( $(".ups-address-validation-suggestion-city", $suggestion).html() );
 
       var state_id = $(".ups-address-validation-suggestion-state", $suggestion).data('state-id');
-      $("#order_" + value + "_address_attributes_state_id option[value=" + state_id + "]").attr('selected', 'selected');
-      $("#order_" + value + "_address_attributes_state_id").trigger('change');
+      $("#order_" + value + "_address_attributes_state_id").val(state_id).trigger('change');
 
       $("#order_" + value + "_address_attributes_zipcode").val( $(".ups-address-validation-suggestion-zip", $suggestion).html() );
     });
